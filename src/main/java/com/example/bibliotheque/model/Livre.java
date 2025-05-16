@@ -1,4 +1,4 @@
-package com.example.demo.bibliotheque.model;
+package com.example.bibliotheque.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,27 +14,13 @@ public class Livre {
     private String auteur;
     private boolean disponible;
 
-    public Livre(String auteur, boolean disponible, Long id, String titre) {
-        this.auteur = auteur;
-        this.disponible = disponible;
-        this.id = id;
-        this.titre = titre;
-    }
-
+    // getters et setters
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getAuteur() {
-        return auteur;
-    }
-
-    public void setAuteur(String auteur) {
-        this.auteur = auteur;
     }
 
     public String getTitre() {
@@ -45,6 +31,14 @@ public class Livre {
         this.titre = titre;
     }
 
+    public String getAuteur() {
+        return auteur;
+    }
+
+    public void setAuteur(String auteur) {
+        this.auteur = auteur;
+    }
+
     public boolean isDisponible() {
         return disponible;
     }
@@ -52,6 +46,4 @@ public class Livre {
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
-
-
 }

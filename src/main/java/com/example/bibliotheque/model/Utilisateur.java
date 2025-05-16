@@ -1,7 +1,6 @@
-package com.example.demo.bibliotheque.model;
+package com.example.bibliotheque.model;
+
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -12,10 +11,9 @@ public class Utilisateur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
-    @Enumerated(EnumType.STRING)
-    private TypeUtilisateur type;
+    private String email;
 
-    // Getters et Setters
+    // getters et setters
     public Long getId() {
         return id;
     }
@@ -32,16 +30,11 @@ public class Utilisateur {
         this.nom = nom;
     }
 
-    public TypeUtilisateur getType() {
-        return type;
+    public String getEmail() {
+        return email;
     }
 
-    public void setType(TypeUtilisateur type) {
-        this.type = type;
-    }
-
-    // Enumération pour le type d'utilisateur
-    public enum TypeUtilisateur {
-        ETUDIANT, PROFESSEUR, BIBLIOTHECAIRE
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
